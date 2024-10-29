@@ -1,0 +1,11 @@
+:root {
+    --cor-primary: aqua;
+}
+
+.texto_1 {
+    color: var(--cor-primary);
+}
+
+.texto_2 {
+    color: var(--cor-primary);
+}

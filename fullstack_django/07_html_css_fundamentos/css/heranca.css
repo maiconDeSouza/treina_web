@@ -1,0 +1,13 @@
+.secao_texto {
+    color: brown;
+    border: 1px solid aqua;
+}
+
+p {
+    border: inherit;
+    color: initial;
+}
+
+button {
+    color: inherit;
+}
