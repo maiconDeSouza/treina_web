@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+
+/*header start*/
+.header {
+    background-color: aliceblue;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#brand {
+    width: 20.875rem;
+}
+/*header end*/
+
+/*main start*/
+.main ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+}
+
+.main ul li {
+    width: 25rem;
+}
+
+.main ul li article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: aliceblue;
+    padding: 1rem;
+}
+
+.main ul li article .section-header .img-teacher{
+    width: 20.3125rem;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.main ul li article .section-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main ul li article .section-main h2 {
+    font-size: 1rem;
+}
+
+.main ul li article .section-main span {
+    color: deeppink;
+}
+
+.main ul li article .section-main p {
+    margin-top: 1rem;
+    font-size: .8rem;
+    width: 400px;
+    text-align: center;
+}
+
+.main ul li article .section-footer button {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background-color: deeppink;
+    font-size: 1.2rem;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all 900ms;
+}
+
+.main ul li article .section-footer button:hover {
+    background-color: rgb(219, 11, 122);
+    transform: scale(110%);
+}
+/*main end*/
+
+/*footer start*/
+.footer {
+    height: 3.125rem;
+    background-color: deeppink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*footer end*/
+
+/*resposividade start*/
+@media (max-width: 768px) {
+    .main ul {
+        flex-direction: column;
+    }
+
+    .main ul li {
+        width: 100%;
+    }
+}
+/*resposividade end*/
