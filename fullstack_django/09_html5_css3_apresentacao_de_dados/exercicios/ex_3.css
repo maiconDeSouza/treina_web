@@ -1,0 +1,71 @@
+table {
+    width: 90rem;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table, table thead th, table thead td, table tbody th, table tbody td, table tfoot td {
+    border: 1px solid black;
+}
+
+table thead td, table thead th {
+    width: calc(100%/4);
+}
+
+table tr {
+    height: 2rem;
+}
+
+table thead tr {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: gray;
+}
+
+table tbody tr:nth-of-type(1), table tfoot tr:nth-of-type(1) {
+    height: 5rem;
+}
+
+table tbody tr:nth-of-type(1) td:nth-of-type(1), 
+table tbody tr:nth-of-type(1) td:nth-of-type(2),
+table tbody tr:nth-of-type(1) td:nth-of-type(3) {
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+table tbody tr:nth-of-type(1) td:nth-of-type(1), 
+table tfoot tr td:nth-of-type(2) button {
+    background-color: aqua;
+}
+
+table tbody tr:nth-of-type(1) td:nth-last-of-type(2), 
+table tfoot tr td:nth-of-type(3) button {
+    background-color: blue;
+}
+
+table tbody tr:nth-of-type(1) td:nth-of-type(3), 
+table tfoot tr td:nth-of-type(4) button {
+    background-color: blueviolet;
+}
+
+table tbody th {
+    font-weight: 100;
+}
+
+table tbody tr:nth-of-type(1) th {
+    font-weight: 900;
+}
+
+table tfoot tr button {
+    border: none;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+table tfoot tr button:hover {
+    opacity: .8;
+}
