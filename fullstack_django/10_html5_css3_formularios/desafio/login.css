@@ -1,0 +1,35 @@
+:root {
+    --body-bg: #f6f8fb;
+    --font-body: "Poppins", sans-serif;
+    --button-bg: #2fb344;
+    --primary: #fff;
+    --border: #808080;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--body-bg);
+    font-family: var(--font-body);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    width: 12.5rem;
+}
+
+.login {
+    width: 28rem;
+    background-color: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    margin: 0 auto;
+}
+

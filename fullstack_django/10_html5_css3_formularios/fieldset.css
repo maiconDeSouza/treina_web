@@ -1,0 +1,16 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.flex input {
+    width: 45rem;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: -2rem;
+}
+
+.flex input:focus {
+    outline: none;
+}
