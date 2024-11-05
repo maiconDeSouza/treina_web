@@ -1,0 +1,146 @@
+:root {
+    --body-bg: #f6f8fb;
+    --font-body: "Poppins", sans-serif;
+    --button-bg: #2fb344;
+    --primary: #fff;
+    --border: #d5d5d5;
+    --color-link: #0054A6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-bg);
+    font-family: var(--font-body);
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content {
+    width: 29rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.container .content header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content header img {
+    width: 12rem;
+}
+
+.container .content main {
+    width: 100%;
+    background-color: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.container .content main h2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.container .content main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.container .content main form div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.container .content main form div:nth-of-type(2) div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .content main form div:nth-of-type(2) div a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    color: var(--color-link);
+    font-weight: 400;
+}
+
+.container .content main form input {
+    width: 100%;
+    height: 2.475rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 0.5625rem 0.75rem;
+}
+
+.container .content main form button {
+    height: 2.475rem;
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 5px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.container .content main section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.container .content main section div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.r {
+    width: 100%;
+    border-top: 1px solid var(--border);
+    margin-top: 0.9rem;
+}
+
+.container .content main section button {
+    height: 2.475rem;
+    border: none;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--primary);
+    font-weight: 700;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.container .content footer {
+    text-align: center;
+    font-size: .875rem;
+}
+
+.container .content footer a {
+    text-decoration: none;
+    color: var(--color-link);
+    font-weight: 400;
+}

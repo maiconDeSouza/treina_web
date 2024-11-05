@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabelas.css">
+    <title>Tabelas</title>
+</head>
+<body>
+    <table class="nomes">
+        <thead>
+            <tr>
+                <th>Nome:</th>
+                <th>Idade: </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>João</td>
+                <td>23</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">fim</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h2>Lista Horizontal</h2>
+    <table class="nomes">
+        <tr>
+            <th>Nome:</th>
+            <td>Maria</td>
+            <td>João</td>
+        </tr>
+        <tr>
+            <th>Idade:</th>
+            <td>25</td>
+            <td>23</td>
+        </tr>
+    </table>
+    <h2>Calendário + colspan</h3>
+        <table id="calendar">
+            <thead>
+                <tr>
+                    <th colspan="7">Novembro</th>
+                </tr>
+                <tr>
+                    <th>Domingo</th>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                    <th>Sábado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Cadastro de escolas + rowspan</h2>
+        <table id="escolas">
+            <tr>
+                <th>Escola:</th>
+                <td>TreinaWeb</td>
+                <td>Rocketseat</td>
+            </tr>
+            <tr>
+                <th rowspan="2">telefone</th>
+                <td>1111-1111</td>
+                <td>2222-2222</td>
+            </tr>
+            <tr>
+                <td>9999-9999</td>
+            </tr>
+        </table>
+
+        <h3>Lista aprovados + colgroup</h3>
+        <table id="aprovados">
+            <colgroup>
+                <col span="2">
+                <col span="1">
+                <col span="2">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>nome</th>
+                    <th>idade</th>
+                    <th>aprovado</th>
+                    <th>curso</th>
+                    <th>unidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dante</td>
+                    <td>23</td>
+                    <td class="aprovado">Aprovado</td>
+                    <td>Agronomia</td>
+                    <td>Escola técnica de Goias</td>
+                </tr>
+                <tr>
+                    <td>Delinha</td>
+                    <td>25</td>
+                    <td class="reprovado">Reprovada</td>
+                    <td>Marketing</td>
+                    <td>Escola técnica de Minas</td>
+                </tr>
+                <tr>
+                    <td>Dona Maia</td>
+                    <td>57</td>
+                    <td class="aprovado">Aprovada</td>
+                    <td>Marketing</td>
+                    <td>Escola técnica de Minas</td>
+                </tr>
+                <tr>
+                    <td>Alfredo</td>
+                    <td>19</td>
+                    <td class="reprovado">Reprovado</td>
+                    <td>TI</td>
+                    <td>Escola técnica do Amazonas</td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+</html>

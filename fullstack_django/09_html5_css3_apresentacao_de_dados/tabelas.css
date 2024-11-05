@@ -1,0 +1,99 @@
+.nomes, .nomes td, .nomes th {
+    border: 3px solid white;
+    border-collapse: collapse;
+}
+
+.nomes td, .nomes th {
+    padding: .3rem 7.5rem;
+    text-align: center;
+}
+
+.nomes th {
+    background-color: aqua;
+}
+
+.nomes td {
+    background-color: burlywood;
+}
+
+table#calendar {
+    width: 100%;
+}
+
+table#calendar, table#calendar th, table#calendar td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table#calendar thead tr:nth-of-type(1){
+    background-color: cadetblue;
+}
+
+table#calendar thead tr:nth-of-type(1) th {
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 900;
+}
+
+table#calendar thead tr:nth-of-type(2){
+    background-color: rgb(168, 210, 211);
+}
+
+table#calendar tbody td{
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+table#calendar tbody tr:nth-child(odd){
+    background-color: rgb(226, 226, 226);
+}
+
+#escolas {
+    width: 400px;
+}
+
+#escolas, #escolas tr, #escolas th, #escolas td {
+    border: 1px solid aqua;
+    border-collapse: collapse;
+}
+
+#escolas td, #escolas th {
+    padding: 1rem;
+}
+
+#aprovados{
+    width: 100%;
+    text-align: center;
+}
+
+#aprovados th {
+    width: calc(100%/5);
+}
+
+#aprovados, #aprovados th, #aprovados td {
+    border: 1px solid brown;
+    border-collapse: collapse;
+}
+
+#aprovados th, #aprovados td {
+    padding: 0.5rem 1rem;
+}
+
+#aprovados colgroup col:nth-of-type(1), #aprovados colgroup col:nth-of-type(3) {
+    background-color: ghostwhite;
+}
+
+#aprovados colgroup col:nth-of-type(2) {
+    background-color: aqua;
+}
+
+#aprovados td.reprovado{
+    color: red;
+}
+
+#aprovados td.aprovado {
+    color: green;
+}

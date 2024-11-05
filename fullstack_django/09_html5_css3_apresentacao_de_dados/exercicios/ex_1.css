@@ -1,0 +1,33 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100vw;
+    margin-top: 1rem;
+    color: white;
+    text-align: left;
+}
+
+table thead th {
+    width: calc(100%/4);
+    height: 4rem;
+    background-color: gray;
+    text-transform: uppercase;
+}
+
+table tbody td {
+    height: 3.5rem;
+    background-color: black;
+}
+
+table, table tbody td {
+    border: 3px solid gray;
+    border-collapse: collapse;
+}
+
+table thead th, table tbody td {
+    padding: 0 1rem;
+}
