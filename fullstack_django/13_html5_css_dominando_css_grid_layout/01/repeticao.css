@@ -2,17 +2,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 .grid-container {
     width: 90vw;
     margin: 3.125rem auto;
-    border: 1px solid red;
+    border: 5px solid red;
 
     display: grid;
     gap: 1rem 2rem;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 100px 400px 100px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas: "header header"
                          "sidebar content"
                          "footer footer";
