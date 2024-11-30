@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(177, 177, 177);
+}
+p {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.a {
+    border-color: aqua;
+    white-space: nowrap;
+}
+
+.b {
+    border-color: greenyellow;
+    white-space: pre;
+}
+
+.c {
+    border-color: brown;
+    white-space: pre-wrap;
+}
+
+.d {
+    border-color: teal;
+    white-space: normal;
+}
