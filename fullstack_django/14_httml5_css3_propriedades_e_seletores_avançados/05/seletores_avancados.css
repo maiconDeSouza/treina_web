@@ -1,0 +1,40 @@
+.item-1 {
+    background-color: aquamarine;
+}
+.item-1 ~ li {
+    background-color: brown;
+}
+
+.container > ul {
+    border: 1px solid greenyellow;
+}
+
+.container > ul li:nth-child(n+4) {
+    background-color: palevioletred;
+}
+
+.ul-feira li:first-child {
+    background-color: greenyellow;
+}
+
+.ul-feira li:last-child {
+    background-color: rebeccapurple;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+h1::before {
+    content: "|";
+}
+
+h1::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+}
