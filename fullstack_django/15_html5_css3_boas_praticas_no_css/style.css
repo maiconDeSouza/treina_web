@@ -1,0 +1,26 @@
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.btn-blue {
+    background-color: blue;
+}
+
+.btn-green {
+    background-color: green;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: row;
+    background-color: aquamarine;
+}
+
+@media(max-width: 500px) {
+    .bloco {
+        flex-direction: column;
+    }
+}
