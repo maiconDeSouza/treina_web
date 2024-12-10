@@ -1,0 +1,12 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: aquamarine;
+    background-image: url("./image/gato.jpg");
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; */
+    /* background: aquamarine url("./image/gato.jpg") no-repeat fixed center center / 300px; */
+    background-image: linear-gradient(to right, aquamarine 80%, green);
+}

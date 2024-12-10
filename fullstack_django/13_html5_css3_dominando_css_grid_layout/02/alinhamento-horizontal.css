@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    width: 90vw;
+    margin: 5rem auto;
+
+    border: 3px solid black;
+
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    padding: 1rem;
+}
+
+.item1 {
+    background-color: aqua;
+    justify-self: flex-end;
+}
+
+.item2 {
+    background-color: brown;
+    align-self: self-start;
+}
+
+.item3 {
+    background-color: palevioletred;
+    
+}
+
+.item4 {
+    background-color: greenyellow;
+}
+
+.item5 {
+    background-color: crimson;
+}
