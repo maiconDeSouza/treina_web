@@ -89,4 +89,31 @@ header .search button {
     cursor: pointer;
 }
 
+header .nav .nav-mobile {
+    display: none;
+}
+
+header .nav .nav-mobile img {
+    background-color: aliceblue;
+}
+
 /*Header-Fim*/
+
+
+/*Media Query*/
+@media (max-width: 680px){
+    header .nav ul, header .nav .search {
+        display: none;
+    }
+
+    header .nav .nav-mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header .nav .nav-mobile img {
+        width: 2.5rem;
+    }
+}
+/*Media Query Fim*/
