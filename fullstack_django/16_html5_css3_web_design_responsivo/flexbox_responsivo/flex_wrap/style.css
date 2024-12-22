@@ -1,0 +1,62 @@
+/* Configurações gerais  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Configurações gerais - end  */
+
+
+/* Header */
+.header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Main */
+.main .principal {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Media */
+@media (max-width: 1128px) {
+    body {
+        background-color: cornflowerblue;
+    }
+
+    .main .principal {
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .header nav ul {
+        flex-wrap: wrap;
+        row-gap: .5rem;
+        column-gap: 1rem;
+    }
+
+    .photo-1 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 680px) {
+    body {
+        background-color: aquamarine;
+    }
+}
