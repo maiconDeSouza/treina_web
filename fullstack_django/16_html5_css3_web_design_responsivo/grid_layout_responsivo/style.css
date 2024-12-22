@@ -35,6 +35,15 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1rem;
     margin: 1rem 0;
+    padding: 1rem;
+}
+
+.cards-desafio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+    justify-content: center;
 }
 
 /* Media */
@@ -67,8 +76,9 @@
     }
 
     .cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(200px, 300px);
         row-gap: 1rem;
+        justify-content: center;
     }
 }
 
