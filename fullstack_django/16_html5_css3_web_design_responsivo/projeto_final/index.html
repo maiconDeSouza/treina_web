@@ -4,73 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="./app.js"></script>
     <title>Projeto</title>
 </head>
 <body>
     <header>
-        <div class="menu">
-            <label for="check">check</label>
-            <input type="checkbox" name="check" id="check">
-            <div class="hamburguer">
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-        <nav class="nav-mobile">
-            <ul>
-                <li>Home</li>
+        <nav class="nav-menu">
+            <ul class="lista-menu scale">
                 <li>Fotos</li>
+                <li>Produtos</li>
                 <li>Sobre</li>
                 <li>Contato</li>
             </ul>
+            <div class="button-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
-    <main>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit non 
-            aut similique, necessitatibus aspernatur debitis quod quos. Doloribus 
-            dolore blanditiis consequuntur repudiandae voluptatibus qui harum, 
-            aliquam, inventore facilis, mollitia sunt.
-        </p>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit non 
-            aut similique, necessitatibus aspernatur debitis quod quos. Doloribus 
-            dolore blanditiis consequuntur repudiandae voluptatibus qui harum, 
-            aliquam, inventore facilis, mollitia sunt.
-        </p>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit non 
-            aut similique, necessitatibus aspernatur debitis quod quos. Doloribus 
-            dolore blanditiis consequuntur repudiandae voluptatibus qui harum, 
-            aliquam, inventore facilis, mollitia sunt.
-        </p>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit non 
-            aut similique, necessitatibus aspernatur debitis quod quos. Doloribus 
-            dolore blanditiis consequuntur repudiandae voluptatibus qui harum, 
-            aliquam, inventore facilis, mollitia sunt.
-        </p>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit non 
-            aut similique, necessitatibus aspernatur debitis quod quos. Doloribus 
-            dolore blanditiis consequuntur repudiandae voluptatibus qui harum, 
-            aliquam, inventore facilis, mollitia sunt.
-        </p>
-    </main>
+    <main></main>
     <footer></footer>
-    <script>
-        document.getElementById('check').addEventListener('change', function() {
-        const navMobile = document.querySelector('.nav-mobile');
-        if (this.checked) {
-            navMobile.style.transform = 'scale(1)';
-        } else {
-            navMobile.style.transform = 'scale(0)';
-        }
-});
-
-    </script>
 </body>
 </html>
