@@ -1,8 +1,8 @@
-const buttonMobile = document.querySelector('.button-mobile')
-const lista = document.querySelector('.lista-menu')
+const menuMobile = document.querySelector(".menu-mobile")
+const listMobile = document.querySelector(".list-mobile")
 
-buttonMobile.addEventListener('click', e => {
+menuMobile.addEventListener("click", e => {
     e.preventDefault()
-    lista.classList.toggle('scale')
-    buttonMobile.classList.toggle('active')
+    menuMobile.classList.toggle("active")
+    listMobile.classList.toggle("active")
 })
