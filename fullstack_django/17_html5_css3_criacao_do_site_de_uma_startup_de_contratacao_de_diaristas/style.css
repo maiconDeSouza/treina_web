@@ -1,0 +1,70 @@
+/*
+***** Config Project *****
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", serif;
+}
+
+:root {
+    --primary: #6b2aee;
+    --secondary: #02e7d9;
+    --light-grey: #e5e5e5;
+    --dark-grey: #707070;
+}
+
+.container {
+    max-width: 68.75rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.box-shadow-project {
+    box-shadow: 1px 0 25px rgba(98, 98, 98, 0.294);
+}
+
+/*
+***** Config Project - end *****
+*/
+
+
+
+/*
+***** Header *****
+*/
+header .container .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+header .container .nav-menu .list-menu {
+    display: flex;
+    gap: 1.875rem;
+}
+
+header .container .nav-menu .list-menu li a {
+    display: block;
+    padding: .625rem 2.1875rem;
+    border-radius: 25px;
+}
+
+header .container .nav-menu .list-menu li:nth-of-type(1) a {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+header .container .nav-menu .list-menu li:nth-of-type(2) a {
+   background-color: #fafafa;
+   color: var(--primary);
+}
+
+
+/*
+***** Header - end *****
+*/
