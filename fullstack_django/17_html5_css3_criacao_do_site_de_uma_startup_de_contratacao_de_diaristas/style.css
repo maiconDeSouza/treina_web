@@ -188,7 +188,7 @@ main .main-section div.container .area-image::after {
 main .what-section {
     position: relative;
     margin-top: -5rem;
-    padding-top: 10rem;
+    padding: 10rem 0;
     background-image: linear-gradient(var(--secondary), var(--primary));
     color: #fff;
 }
@@ -263,4 +263,101 @@ main .what-section .container .what-content .list-reasons .item-reasons div:nth-
 
 /*
 ***** Main - What-Section - end *****
+*/
+
+
+/*
+***** Main - Faqs-Section *****
+*/
+main .faqs-section .wave {
+    position: relative;
+    z-index: 35;
+    height: 100px;
+    margin-top: -3rem;
+    background-image: url("./images/wave.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+main .faqs-section .container .faqs-content {
+    padding: 5rem 0;
+}
+
+main .faqs-section .container .faqs-content .faqs-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--dark-grey);
+    text-align: center;
+}
+
+main .faqs-section .container .faqs-content .faqs-title h2 {
+    font-size: 1.5625rem;
+}
+
+main .faqs-section .container .faqs-content .faqs-title p {
+    font-size: 1.25rem;
+}
+
+main .faqs-section .container .faqs-content .faqs-title hr {
+    width: 6rem;
+    margin: 0 auto;
+    border-color: var(--dark-grey);
+
+}
+
+
+main .faqs-section .container .faqs-content .list-faqs-accortion {
+    padding: 5rem 0;
+}
+
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li .button-accordion {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active {
+    border-bottom: none;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li .button-accordion span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li .button-accordion img.minus {
+    display: none;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active img.minus {
+    display: inline-block;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active img.plus {
+    display: none;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li .accortion {
+    display: none;
+    padding: 4rem;
+    border: 1px solid var(--primary);
+    border-top: none;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active + .accortion {
+    display: block;
+}
+
+
+
+
+/*
+***** Main - Faqs-Section - end *****
 */
