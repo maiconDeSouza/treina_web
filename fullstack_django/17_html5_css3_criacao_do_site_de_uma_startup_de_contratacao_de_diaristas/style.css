@@ -345,14 +345,27 @@ main .faqs-section .container .faqs-content .list-faqs-accortion li button.butto
 }
 
 main .faqs-section .container .faqs-content .list-faqs-accortion li .accortion {
+    max-height: 0;
+    border-top: none;
+    transition: all .6s;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li .accortion p {
     display: none;
+    
+}
+
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active + .accortion p {
+    display: block;
+}
+
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active + .accortion {
+    max-height: 18.75rem;
     padding: 4rem;
     border: 1px solid var(--primary);
     border-top: none;
-}
-
-main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active + .accortion {
-    display: block;
 }
 
 
@@ -361,3 +374,100 @@ main .faqs-section .container .faqs-content .list-faqs-accortion li button.butto
 /*
 ***** Main - Faqs-Section - end *****
 */
+
+
+/*
+***** Footer *****
+*/
+footer {
+    padding: 3rem 0;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+footer div.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1.25rem;
+}
+
+footer div.container h4 {
+    font-weight: 700;
+}
+
+footer .container .footer-menu ul li a {
+    font-size: 0.875rem;
+    font-weight: 200;
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer div.container .footer-title p {
+    font-size: 0.875rem;
+    font-weight: 200;
+    color: #fff;
+}
+
+footer div.container .footer-social ul {
+    display: flex;
+    gap: 1rem;
+}
+
+footer div.container .footer-social ul li a {
+    display: grid;
+    place-items: center;
+    width: 3.1875rem;
+    height: 3.1875rem;
+    border-radius: 50%;
+    background-color: #581ECD;
+    color: #fff;
+}
+
+/*
+***** Footer - end *****
+*/
+
+
+/*
+***** Media Query *****
+*/
+
+@media(max-width: 598px) {
+    header .container .nav-menu .list-menu {
+        display: none;
+    }
+
+    main .main-section {
+        background-image: none;
+    }
+
+    main .main-section div.container .area-image::before {
+        display: none;
+    }
+
+    main .main-section div.container .area-image::after {
+        display: none;
+    }
+
+    main .main-section div.container .area-image {
+        display: none;
+    }
+
+    main .main-section div.container .area-button > span:nth-of-type(1) {
+        display: none;
+    }
+
+    main .main-section div.container .area-button {
+        text-align: center;
+    }
+
+    main .main-section div.container .area-button a {
+        width: 100%;
+    }
+
+    main .what-section {
+        margin-top: 0;
+        width: 100%;
+    }
+
+}
