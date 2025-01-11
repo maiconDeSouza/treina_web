@@ -462,12 +462,32 @@ footer div.container .footer-social ul li a {
     }
 
     main .main-section div.container .area-button a {
-        width: 100%;
+        width: 80%;
     }
 
     main .what-section {
-        margin-top: 0;
+        margin-top: 2rem;
         width: 100%;
+    }
+
+    main .what-section .container .what-content {
+        width: 100%;
+    }
+
+    main .what-section .container .what-content .what-title h2 {
+        font-size: 1rem;
+    }
+
+    main .what-section .container .what-content .list-reasons .item-reasons {
+        flex-direction: column;
+    }
+
+    main .faqs-section .wave {
+        max-width: 100%;
+    }
+
+    main .what-section::before {
+        display: none;
     }
 
 }
