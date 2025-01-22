@@ -17,11 +17,21 @@ const nomes = [
   ]
 
   const ul = document.querySelector("ul")
+  
 
-  function criarLista(){
+  function criarLista(nomes, ulSecletor){
+    if(!ulSecletor){
+      console.error(`Elemento <ul> não encontrado."`)
+    }
+    const fragment = document.createDocumentFragment()
+
     nomes.forEach(item => {
         const li = document.createElement("li")
-        li.innerText = item
-        ul.appendChild(li)
+        li.textContent = item
+        fragment.appendChild(li)
     })
+
+    ulSecletor.appendChild(fragment)
   }
+
+  criarLista(nomes, ul)
