@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", serif;
+}
+
+:root {
+    --body-bg: #f4f4f9;
+    --box-bg: #ffffff;
+    --input-bg: #eef2f3;
+    --text-color: #333333;
+    --button-bg: #4CAF50;
+    --button-text: #ffffff;
+    --header-footer-bg: #3A86FF;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+.underweight {
+    background-color: #ADD8E6;
+    color: #000000;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.normal-weight {
+    background-color: #90EE90;
+    color: #000000;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.overweight {
+    background-color: #FFD700;
+    color: #000000;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.obesity-grade-1 {
+    background-color: #FFA500;
+    color: #FFFFFF;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.obesity-grade-2 {
+    background-color: #FF6347;
+    color: #FFFFFF;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.obesity-grade-3 {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+
+body {
+    display: grid;
+    grid-template-rows: 6.25rem auto 3.125rem;
+    height: 100vh;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+}
+
+header {
+    width: 100vw;
+    background-color: var(--header-footer-bg);
+    display: grid;
+    place-items: center;
+    color: var(--button-text);
+    
+}
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+main .container {
+    width: 90%;
+    max-width: 45rem;
+    padding: 1rem;
+    background-color: var(--box-bg);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+}
+
+main .container form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+main .container form input {
+    height: 2.5rem;
+    padding: 1rem;
+    background-color: var(--input-bg);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+main .container form button {
+    height: 3rem;
+    width: 12.5rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 8px;
+}
+
+main .container p {
+    width: 100%;
+    height: 6.25rem;
+    text-align: center;
+}
+
+footer {
+    width: 100vw;
+    background-color: var(--header-footer-bg);
+}
