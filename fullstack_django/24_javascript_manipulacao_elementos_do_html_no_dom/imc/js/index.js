@@ -55,10 +55,13 @@ function indexIMC(imc){
 button.addEventListener('click', e => {
     e.preventDefault()
     p.className = ''
+    p.textContent = ''
     const weightNumber = Number(weight.value)
     const heightNumber = Number(height.value)
 
     if(!weightNumber || !heightNumber){
+        const text = document.createTextNode('Valor inválido! Preencha todos os campos e digite apenas números')
+        p.appendChild(text)
         return
     }
 
@@ -66,6 +69,7 @@ button.addEventListener('click', e => {
     const scale = indexIMC(imc)
 
     p.classList.add(scale.className)
-    p.textContent = `Seu imc é de ${imc.toFixed(2)} - ${scale.text}`
+    const text = document.createTextNode(`Seu imc é de ${imc.toFixed(2)} - ${scale.text}`)
+    p.appendChild(text)
 
 })
