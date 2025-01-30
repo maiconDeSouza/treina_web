@@ -1,0 +1,493 @@
+/*
+***** Config Project *****
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", serif;
+}
+
+:root {
+    --primary: #6b2aee;
+    --secondary: #02e7d9;
+    --light-grey: #e5e5e5;
+    --dark-grey: #707070;
+}
+
+.container {
+    max-width: 68.75rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.box-shadow-project {
+    box-shadow: 1px 0 25px rgba(98, 98, 98, 0.294);
+}
+
+/*
+***** Config Project - end *****
+*/
+
+
+
+/*
+***** Header *****
+*/
+header .container .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+header .container .nav-menu .list-menu {
+    display: flex;
+    gap: 1.875rem;
+}
+
+header .container .nav-menu .list-menu li a {
+    display: block;
+    padding: .625rem 2.1875rem;
+    border-radius: 25px;
+}
+
+header .container .nav-menu .list-menu li:nth-of-type(1) a {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+header .container .nav-menu .list-menu li:nth-of-type(2) a {
+   background-color: #fafafa;
+   color: var(--primary);
+}
+
+/*
+***** Header - end *****
+*/
+
+/*
+***** Main - Main-Section *****
+*/
+main {
+    margin: 3rem 0;
+}
+main .main-section {
+    background-image: url("./images/bg-main-section.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: right;
+}
+
+main .main-section div.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .main-section div.container .area-button {
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+main .main-section div.container .area-button > span,
+main .main-section div.container .area-button a {
+    display: block;
+    width: 28.75rem;
+}
+
+main .main-section div.container .area-button > span:nth-of-type(1) {
+    position: relative;
+    height: 7.8125rem;
+    border: 4px solid #e5e5e5;
+    border-radius: 62.5px;
+    padding: 2rem 3.5rem;
+
+    font-size: 1.9375rem;
+    line-height: 1.908125rem;
+    font-weight: 600;
+    color: var(--dark-grey);
+    
+}
+
+main .main-section div.container .area-button > span:nth-of-type(1)::after {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    right: -1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+    background-image: url("./images/search.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+main .main-section div.container .area-button > span:nth-of-type(1) span {
+    color: var(--primary);
+}
+
+main .main-section div.container .area-button > span:nth-of-type(2) {
+    width: 19.6875rem;
+    font-size: 1.25rem;
+    line-height: 1.41875rem;
+    color: var(--dark-grey);
+}
+
+main .main-section div.container .area-button a {
+    padding: 1rem 0;
+    background-color: var(--primary);
+    color: #fff;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 36px;
+}
+
+main .main-section div.container .area-image {
+    position: relative;
+    z-index: 30;
+}
+
+main .main-section div.container .area-image::before,
+main .main-section div.container .area-image::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+main .main-section div.container .area-image::before {
+    width: 8.1875rem;
+    height: 8.1875rem;
+    background-color: var(--primary);
+    top: 5rem;
+    right: 1rem;
+}
+
+main .main-section div.container .area-image::after {
+    width: 2.3125rem;
+    height: 2.3125rem;
+    background-color: var(--light-grey);
+    bottom: 4rem;
+    right: 1rem;
+}
+
+/*
+***** Main - Main-Section - end *****
+*/
+
+
+/*
+***** Main - What-Section *****
+*/
+main .what-section {
+    position: relative;
+    margin-top: -5rem;
+    padding: 10rem 0;
+    background-image: linear-gradient(var(--secondary), var(--primary));
+    color: #fff;
+}
+
+main .what-section::before {
+    content: '';
+    position: absolute;
+    width: 3.5625rem;
+    height: 3.5625rem;
+    border-radius: 50%;
+    top: -2rem;
+    right: 50%;
+    transform: translate(50%);
+    background-color: var(--secondary);
+    background-image: url("./images/triangulo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 4px solid #fff;
+}
+
+main .what-section .container .what-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main .what-section .container .what-content .what-title h2 {
+    font-size: 1.5625rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+main .what-section .container .what-content .what-title hr {
+    width: 6rem;
+    border-color: #ffffff31;
+    margin: 0 auto;
+}
+
+main .what-section .container .what-content .list-reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+    column-gap: 1rem;
+    row-gap: 5rem;
+    margin: 1rem 0 4rem 0;
+}
+
+main .what-section .container .what-content .list-reasons .item-reasons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+main .what-section .container .what-content .list-reasons .item-reasons div:nth-of-type(1) {
+    padding: 0.3125rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+main .what-section .container .what-content .list-reasons .item-reasons div:nth-of-type(1) i {
+    font-size: 3.6875rem;
+}
+
+main .what-section .container .what-content .list-reasons .item-reasons div:nth-of-type(2) h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+main .what-section .container .what-content .list-reasons .item-reasons div:nth-of-type(2) p {
+    font-size: 0.875rem;
+}
+
+
+/*
+***** Main - What-Section - end *****
+*/
+
+
+/*
+***** Main - Faqs-Section *****
+*/
+main .faqs-section .wave {
+    position: relative;
+    z-index: 35;
+    height: 100px;
+    margin-top: -3rem;
+    background-image: url("./images/wave.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+main .faqs-section .container .faqs-content {
+    padding: 5rem 0;
+}
+
+main .faqs-section .container .faqs-content .faqs-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--dark-grey);
+    text-align: center;
+}
+
+main .faqs-section .container .faqs-content .faqs-title h2 {
+    font-size: 1.5625rem;
+}
+
+main .faqs-section .container .faqs-content .faqs-title p {
+    font-size: 1.25rem;
+}
+
+main .faqs-section .container .faqs-content .faqs-title hr {
+    width: 6rem;
+    margin: 0 auto;
+    border-color: var(--dark-grey);
+
+}
+
+
+main .faqs-section .container .faqs-content .list-faqs-accortion {
+    padding: 5rem 0;
+}
+
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li .button-accordion {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active {
+    border-bottom: none;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li .button-accordion span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li .button-accordion img.minus {
+    display: none;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active img.minus {
+    display: inline-block;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active img.plus {
+    display: none;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li .accortion {
+    max-height: 0;
+    border-top: none;
+    transition: all .6s;
+}
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li .accortion p {
+    display: none;
+    
+}
+
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active + .accortion p {
+    display: block;
+}
+
+
+main .faqs-section .container .faqs-content .list-faqs-accortion li button.button-accordion.active + .accortion {
+    max-height: 18.75rem;
+    padding: 4rem;
+    border: 1px solid var(--primary);
+    border-top: none;
+}
+
+
+
+
+/*
+***** Main - Faqs-Section - end *****
+*/
+
+
+/*
+***** Footer *****
+*/
+footer {
+    padding: 3rem 0;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+footer div.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1.25rem;
+}
+
+footer div.container h4 {
+    font-weight: 700;
+}
+
+footer .container .footer-menu ul li a {
+    font-size: 0.875rem;
+    font-weight: 200;
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer div.container .footer-title p {
+    font-size: 0.875rem;
+    font-weight: 200;
+    color: #fff;
+}
+
+footer div.container .footer-social ul {
+    display: flex;
+    gap: 1rem;
+}
+
+footer div.container .footer-social ul li a {
+    display: grid;
+    place-items: center;
+    width: 3.1875rem;
+    height: 3.1875rem;
+    border-radius: 50%;
+    background-color: #581ECD;
+    color: #fff;
+}
+
+/*
+***** Footer - end *****
+*/
+
+
+/*
+***** Media Query *****
+*/
+
+@media(max-width: 598px) {
+    header .container .nav-menu .list-menu {
+        display: none;
+    }
+
+    main .main-section {
+        background-image: none;
+    }
+
+    main .main-section div.container .area-image::before {
+        display: none;
+    }
+
+    main .main-section div.container .area-image::after {
+        display: none;
+    }
+
+    main .main-section div.container .area-image {
+        display: none;
+    }
+
+    main .main-section div.container .area-button > span:nth-of-type(1) {
+        display: none;
+    }
+
+    main .main-section div.container .area-button {
+        text-align: center;
+    }
+
+    main .main-section div.container .area-button a {
+        width: 80%;
+    }
+
+    main .what-section {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    main .what-section .container .what-content {
+        width: 100%;
+    }
+
+    main .what-section .container .what-content .what-title h2 {
+        font-size: 1rem;
+    }
+
+    main .what-section .container .what-content .list-reasons .item-reasons {
+        flex-direction: column;
+    }
+
+    main .faqs-section .wave {
+        max-width: 100%;
+    }
+
+    main .what-section::before {
+        display: none;
+    }
+
+}
