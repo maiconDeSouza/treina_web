@@ -1,32 +1,42 @@
 import {
     retrievingTasks, 
     saveList, 
-    generateTaskObject, 
+    generateTaskObject,
+    completedTask, 
     createList, 
     editTask, 
     saveEditToList,
     deleteTask,
 } from './utils.js'
 
-const toDoList = retrievingTasks()
 const buttonToAddTasks = document.querySelector('#add')
 const ul = document.querySelector('ul')
 
 
 buttonToAddTasks.addEventListener('click', e => {
+    const toDoList = retrievingTasks()
     const taskText = document.querySelector('#input-task')
   
-    if(!taskText) return 
+    if(!taskText.value.trim()) return 
 
     const task = generateTaskObject(taskText.value)
     toDoList.push(task)
+    saveList(toDoList)
     createList(toDoList)
     taskText.value = ''
-    saveList(toDoList)
 })
 
 ul.addEventListener('click', e => {
-    if(e.target.tagName === 'LI') return e.target.classList.toggle('completed')
+    const toDoList = retrievingTasks()
+    const li = e.target.closest('li')
+    if (!li) return
+
+    if(e.target.tagName === 'LI'){
+        const key = e.target.getAttribute('key')
+        const newToDoList = completedTask(toDoList, key)
+        saveList(newToDoList)
+        createList(newToDoList)
+    }
 
     if(e.target.classList[1] === 'bi-pencil') return editTask(e.target.closest("li"))
     
@@ -36,8 +46,8 @@ ul.addEventListener('click', e => {
         const text = input.value
         const key = li.getAttribute('key')
         const newToDoList = saveEditToList(toDoList, text, key)
-        createList(newToDoList)
         saveList(newToDoList)
+        createList(newToDoList)
         return
     }
 
@@ -45,14 +55,15 @@ ul.addEventListener('click', e => {
         const li = e.target.closest("li")
         const key = li.getAttribute('key')
         const newToDoList = deleteTask(toDoList, key)
-        createList(newToDoList)
         saveList(newToDoList)
+        createList(newToDoList)  
         return
     }
     
 })
 
 function init(){
+    const toDoList = retrievingTasks()
     createList(toDoList)
 }
 
