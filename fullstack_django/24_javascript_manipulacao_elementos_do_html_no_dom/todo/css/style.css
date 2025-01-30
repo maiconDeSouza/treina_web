@@ -120,7 +120,7 @@ main .container .task-list ul li{
     width: 100%;
     padding: 1rem;
     background-color: var(--color-task-background);
-    border: 1px solid var(--color-task-border);
+    border: 2px solid var(--color-task-border);
     border-radius: 8px;
 
     display: grid;
@@ -128,7 +128,19 @@ main .container .task-list ul li{
 }
 
 main .container .task-list ul li.completed{
-    border: 1px solid var(--color-task-completed);
+    border: 2px solid var(--color-task-completed);
+}
+
+main .container .task-list ul li.editing{
+    border: 2px solid var(--color-task-editing);
+}
+
+main .container .task-list ul li.editing input {
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
 }
 
 main .container .task-list ul li button {

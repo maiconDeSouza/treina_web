@@ -1,26 +1,27 @@
-import {generateId} from './teste.js'
-console.log(generateId())
-const tasks = [
-    {
-        key: '23',
-        task: 'Task 1',
-        completed: false
-    },
-    {
-        key: 25,
-        task: 'Task 2',
+export function retrievingTasks(){
+    const toDoList = JSON.parse(localStorage.getItem('mcnTasks') || "[]")
+    return toDoList
+    
+}
+
+export function saveList(toDoList){
+    localStorage.setItem('mcnTasks', JSON.stringify(toDoList))
+}
+
+const generateId = () => `mcn-${Date.now()}-${Math.floor(Math.random() * 1000)}`
+
+export function generateTaskObject(text){
+    return {
+        key: generateId(),
+        task: text,
         completed: false
     }
-]
+}
 
-const buttonAdd = document.querySelector('#add')
-const ul = document.querySelector('ul')
-const buttonEdit = document.querySelector('button-edit')
-
-function createLI(text){
+function createLI(TaskName){
     const li = document.createElement('li')
     const span = document.createElement('span')
-    const textTask = document.createTextNode(text)
+    const textTask = document.createTextNode(TaskName)
 
     const buttonEditing = document.createElement('button')
     const iEditing = document.createElement('i')
@@ -44,11 +45,11 @@ function createLI(text){
     return li
 }
 
-function createList(){
+export function createList(toDoList){
     const ul = document.querySelector('.task-list ul')
     ul.textContent = ''
     const frag = document.createDocumentFragment()
-    tasks.forEach(item => {
+    toDoList.forEach(item => {
         const li = createLI(item.task)
         li.setAttribute('key', item.key)
         frag.appendChild(li)
@@ -56,43 +57,13 @@ function createList(){
     ul.appendChild(frag)
 }
 
-function gerarOBJ(text){
-    return {
-        task: text,
-        completed: false
-    }
-}
-
-buttonAdd.addEventListener('click', e => {
-    const taskText = document.querySelector('#input-task')
-
-    if(!taskText){
-        return
-    }
-
-    const task = gerarOBJ(taskText.value)
-
-    tasks.push(task)
-    createList()
-    taskText.value = ''
-})
-
-
-ul.addEventListener('click', e => {
-  
-    if(e.target.tagName === 'LI'){
-        e.target.classList.toggle('completed')
-        return
-    }
-
-    if(e.target.classList[1] === 'bi-pencil'){
-       const li = e.target.closest("li")
-       console.log(li.value)
-       const inputEditing = document.createElement('input')
+export function editTask(li){
+    const inputEditing = document.createElement('input')
        const buttonSalve = document.createElement('button')
        const textSalve = document.createTextNode('Salvar')
        inputEditing.value = li.textContent
        inputEditing.setAttribute('type', 'text')
+       inputEditing.classList.add('input-edit')
        buttonSalve.appendChild(textSalve)
        buttonSalve.classList.add('button-edit')
        li.classList = ''
@@ -100,12 +71,22 @@ ul.addEventListener('click', e => {
        li.textContent = ''
        li.appendChild(inputEditing)
        li.appendChild(buttonSalve)
-        
-    }
-    
-})
+}
 
+export function saveEditToList(toDoList, text, key){
+    const newToDoList = toDoList.map(item => {
+        if(item['key'] === key){
+            item['task'] = text
+            return item
+        }
+        return item
+    })
 
+    return newToDoList
+}
 
+export function deleteTask(toDoList, key){
+    const newToDoList = toDoList.filter(item => item['key'] !== key)
+    return newToDoList
+}
 
-createList()
