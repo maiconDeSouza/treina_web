@@ -2,6 +2,7 @@ export function errorText(paragraph, text){
     paragraph.textContent = ''
     const nodeText = document.createTextNode(text)
     paragraph.appendChild(nodeText)
+    paragraph.setAttribute('aria-invalid', text)
 }
 
 export function validateCPF(arrayCPF){

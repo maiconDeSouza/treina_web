@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 45rem;
+    height: 25rem;
+    padding: 1px;
+    background-color: aquamarine;
+    border-radius: 8px;
+
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#draggable {
+    width: 6.25rem;
+    height: 3.125rem;
+    background-color: brown;
+}
+
+#dropzone {
+    width: 6.875rem;
+    height: 3.4375rem;
+    background-color: #fff;
+}
+
+#dropzone.add {
+    display: grid;
+    place-items: center;
+}

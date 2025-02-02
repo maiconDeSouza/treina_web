@@ -6,8 +6,7 @@ import {
 export function checkFullname(){
     const fullname = document.querySelector('#fullname').value
     const p = document.querySelector('.fullname p')
-    const cleanNameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/
-
+    const cleanNameRegex = /^[A-Za-zÀ-ÿ]+(?: [A-Za-zÀ-ÿ]+){1,5}$/
     if(!fullname.trim()){
         const text = 'Não deixe o campo nome completo vazio'
         errorText(p, text)
@@ -15,13 +14,13 @@ export function checkFullname(){
     }
 
     if(fullname.length <= 5){
-        const text = 'Por favor digite seu nome completo, ele deve ter mais do que três letras'
+        const text = 'Por favor digite seu nome completo, ele deve ter mais do que cincos letras'
         errorText(p, text)
         return false
     }
 
     if(!cleanNameRegex.test(fullname)){
-        const text = 'No nome deve apenas haver Letras, não é permitido caracteres especiais'
+        const text = 'No nome deve apenas haver Letras, não é permitido caracteres especiais e números'
         errorText(p, text)
         return false
     }
@@ -33,7 +32,7 @@ export function checkFullname(){
 export function checkCPF(){
     const cpf = document.querySelector('#cpf').value
     const p = document.querySelector('.cpf p')
-    const clearCPF = cpf.replaceAll('.', '').replaceAll('-', '').split('').map(n => Number(n))
+    const clearCPF = cpf.replace(/\D/g, '').split('').map(n => Number(n))
     
     const isValid = validateCPF(clearCPF)
  
@@ -83,7 +82,7 @@ export function checkPassword(){
     const confirmPassword = document.querySelector('#confirm-password').value
     const pConfirmPassword = document.querySelector('.confirm-password p')
 
-    const numbersSpecialCharacters = /^(?=.*\d)(?=.*[\W_]).+$/
+    const numbersSpecialCharacters = /^(?=.*\d)(?=.*[\W_]).{5,}$/
 
     if(password.length < 5 || password.length > 30){
         const text = 'A senha deve ter de 5 a 30 caracteres'
