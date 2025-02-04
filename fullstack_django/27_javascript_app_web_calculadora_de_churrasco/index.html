@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/main.js" defer></script>
+    <title>Calculadora de Churrasco</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="./img/logo-tw.svg" alt="Logo treinaweb">
+        </div>
+    </header>
+    <main>
+        <section class="amount container">
+            <h1>Calculadora de Churrasco</h1>
+            <label for="amount-input">Insira quantas pessoas irão ao churrasco</label>
+            <input type="number" name="amount-input" id="amount-input" min="0">
+        </section>
+        <section class="main container">
+            <div class="set">
+                <h2>Carnes</h2>
+                <ul>
+                    <li>
+                        <span>Bovina</span>
+                        <input type="number" name="meats" id="meats" placeholder="Valor do Kg" min="0">
+                    </li>
+                    <li>
+                        <span>Frango</span>
+                        <input type="number" name="chicken" id="chicken" placeholder="Valor do Kg" min="0">
+                    </li>
+                    <li>
+                        <span>Suina</span>
+                        <input type="number" name="pork" id="pork" placeholder="Valor do Kg" min="0">
+                    </li>
+                </ul>
+            </div>
+            <div class="set">
+                <h2>Bebidas</h2>
+                <ul>
+                    <li>
+                        <span>Refrigerantes (Por Litro)</span>
+                        <input type="number" name="soft-drinks" id="soft-drinks" placeholder="Valor do litro" min="0">
+                    </li>
+                    <li>
+                        <span>Cerveja (lata 355ml)</span>
+                        <input type="number" name="beer" id="beer" placeholder="Valor por unidade" min="0">
+                    </li>
+                    <li>
+                        <span>N. de pessoas que bebem cerveja</span>
+                        <input type="number" name="people-who-drink" id="people-who-drink" placeholder="N. Pessoas" min="0">
+                    </li>
+                </ul>
+            </div>
+            <button type="button">Fazer cálculo</button>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
