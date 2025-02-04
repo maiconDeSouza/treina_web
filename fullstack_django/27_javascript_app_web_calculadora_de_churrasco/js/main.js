@@ -1,6 +1,7 @@
 import {
     gerenateListValues,
-    setMessageError
+    setMessageError,
+    calcule
 } from './utils.js'
 
 import {
@@ -23,6 +24,8 @@ buttonCalc.addEventListener('click', e => {
         return
     }
     
+    const result = calcule(values)
+    console.log(result)
 })
 
 input.forEach(input => {

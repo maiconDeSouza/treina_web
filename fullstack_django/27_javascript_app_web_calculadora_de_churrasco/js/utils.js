@@ -4,7 +4,7 @@ export function gerenateListValues(){
         description: `'Quantidade de pessoas que vão participar do churrasco'`
     }
     const meats = {
-        value: Number(document.querySelector('#meats').value),
+        value: Number(document.querySelector('#meats').value.replace(',', '.')),
         description: `'preço do quilo da carne bovina'`
     }
     const chicken = {
@@ -54,9 +54,29 @@ export function calcule(arrayValues){
     const litersPerPersonSoftDrinks = 0.500
     const cansPerPersonBeer = 3
 
-    const weightBuyMeats = arrayValues[0] * weightPerPersonMeats
-    const weightBuyChicken = arrayValues[0] * weightPerPersonChicken
-    const weightBuyPork = arrayValues[0] * weightPerPersonPork
-    const literstBuySoftDrinks = arrayValues[0] * litersPerPersonSoftDrinks
-    const cansBuyBeer = arrayValues[0] * cansPerPersonBeer
+    const totalWeightMeats = arrayValues[0].value * weightPerPersonMeats
+    const totalWeightChicken = arrayValues[0].value * weightPerPersonChicken
+    const totalWeightPork = arrayValues[0].value * weightPerPersonPork
+    const totalLitersSoftDrinks = arrayValues[0].value * litersPerPersonSoftDrinks
+    const totalCansBeer = arrayValues[6].value * cansPerPersonBeer
+    
+    const sumMeats = arrayValues[1].value * totalWeightMeats
+    const sumChicken = arrayValues[2].value * totalWeightChicken
+    const sumPork = arrayValues[3].value * totalWeightPork
+    const sumSoftDrinks = arrayValues[4] * totalLitersSoftDrinks
+    const sumBeer = arrayValues[5] * totalCansBeer
+
+    return {
+        totalWeightMeats,
+        sumMeats,
+        totalWeightChicken,
+        sumChicken,
+        totalWeightPork,
+        sumPork,
+        totalLitersSoftDrinks,
+        sumSoftDrinks,
+        totalCansBeer,
+        sumBeer
+    }
+
 }
