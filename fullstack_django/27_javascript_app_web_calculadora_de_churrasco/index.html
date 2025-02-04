@@ -20,7 +20,7 @@
         <section class="amount container">
             <h1>Calculadora de Churrasco</h1>
             <label for="amount-input">Insira quantas pessoas irão ao churrasco</label>
-            <input type="number" name="amount-input" id="amount-input" min="0" required value="0">
+            <input type="number" name="amount-input" id="amount-input" min="0" required>
         </section>
         <div class="error container">
             <p></p>
@@ -31,15 +31,15 @@
                 <ul>
                     <li>
                         <span>Bovina</span>
-                        <input type="number" name="meats" id="meats" placeholder="Valor do Kg" min="0" value="0">
+                        <input type="text" class="real" name="meats" id="meats" placeholder="Valor do Kg" min="0">
                     </li>
                     <li>
                         <span>Frango</span>
-                        <input type="number" name="chicken" id="chicken" placeholder="Valor do Kg" min="0" value="0">
+                        <input type="text" class="real" name="chicken" id="chicken" placeholder="Valor do Kg" min="0">
                     </li>
                     <li>
                         <span>Suina</span>
-                        <input type="number" name="pork" id="pork" placeholder="Valor do Kg" min="0" value="0">
+                        <input type="text" class="real" name="pork" id="pork" placeholder="Valor do Kg" min="0">
                     </li>
                 </ul>
             </div>
@@ -48,15 +48,15 @@
                 <ul>
                     <li>
                         <span>Refrigerantes (Por Litro)</span>
-                        <input type="number" name="soft-drinks" id="soft-drinks" placeholder="Valor do litro" min="0" value="0">
+                        <input type="text" class="real" name="soft-drinks" id="soft-drinks" placeholder="Valor do litro" min="0">
                     </li>
                     <li>
                         <span>Cerveja (lata 355ml)</span>
-                        <input type="number" name="beer" id="beer" placeholder="Valor por unidade" min="0" value="0">
+                        <input type="text" class="real" name="beer" id="beer" placeholder="Valor por unidade" min="0">
                     </li>
                     <li>
                         <span>N. de pessoas que bebem cerveja</span>
-                        <input type="number" name="people-who-drink" id="people-who-drink" placeholder="N. Pessoas" min="0" value="0">
+                        <input type="number" name="people-who-drink" id="people-who-drink" placeholder="N. Pessoas" min="0">
                     </li>
                 </ul>
             </div>
