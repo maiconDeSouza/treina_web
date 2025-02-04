@@ -20,23 +20,26 @@
         <section class="amount container">
             <h1>Calculadora de Churrasco</h1>
             <label for="amount-input">Insira quantas pessoas irão ao churrasco</label>
-            <input type="number" name="amount-input" id="amount-input" min="0">
+            <input type="number" name="amount-input" id="amount-input" min="0" required value="0">
         </section>
+        <div class="error container">
+            <p></p>
+        </div>
         <section class="main container">
             <div class="set">
                 <h2>Carnes</h2>
                 <ul>
                     <li>
                         <span>Bovina</span>
-                        <input type="number" name="meats" id="meats" placeholder="Valor do Kg" min="0">
+                        <input type="number" name="meats" id="meats" placeholder="Valor do Kg" min="0" value="0">
                     </li>
                     <li>
                         <span>Frango</span>
-                        <input type="number" name="chicken" id="chicken" placeholder="Valor do Kg" min="0">
+                        <input type="number" name="chicken" id="chicken" placeholder="Valor do Kg" min="0" value="0">
                     </li>
                     <li>
                         <span>Suina</span>
-                        <input type="number" name="pork" id="pork" placeholder="Valor do Kg" min="0">
+                        <input type="number" name="pork" id="pork" placeholder="Valor do Kg" min="0" value="0">
                     </li>
                 </ul>
             </div>
@@ -45,19 +48,76 @@
                 <ul>
                     <li>
                         <span>Refrigerantes (Por Litro)</span>
-                        <input type="number" name="soft-drinks" id="soft-drinks" placeholder="Valor do litro" min="0">
+                        <input type="number" name="soft-drinks" id="soft-drinks" placeholder="Valor do litro" min="0" value="0">
                     </li>
                     <li>
                         <span>Cerveja (lata 355ml)</span>
-                        <input type="number" name="beer" id="beer" placeholder="Valor por unidade" min="0">
+                        <input type="number" name="beer" id="beer" placeholder="Valor por unidade" min="0" value="0">
                     </li>
                     <li>
                         <span>N. de pessoas que bebem cerveja</span>
-                        <input type="number" name="people-who-drink" id="people-who-drink" placeholder="N. Pessoas" min="0">
+                        <input type="number" name="people-who-drink" id="people-who-drink" placeholder="N. Pessoas" min="0" value="0">
                     </li>
                 </ul>
             </div>
-            <button type="button">Fazer cálculo</button>
+            <button type="button" class="calc">Fazer cálculo</button>
+        </section>
+        <section class="result container">
+            <h2>Resultado</h2>
+            <!-- <table class="meats">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="2" class="right">Quantidade</th>
+                        <th scope="col" class="right">total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Carne Bovina Necessária para o Churrasco</td>
+                        <td class="right">2.000g</td>
+                        <td class="right">R$51,00</td>
+                    </tr>
+                    <tr>
+                        <td>Frango Necessária para o Churrasco</td>
+                        <td class="right">1.000g</td>
+                        <td class="right">R$23,00</td>
+                    </tr>
+                    <tr>
+                        <td>Suina Necessária para o Churrasco</td>
+                        <td class="right">1.500g</td>
+                        <td class="right">R$25,00</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td class="right">4.500g</td>
+                        <td class="right">R$99,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="drinks">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="2" class="right">Quantidade</th>
+                        <th scope="col" class="right">total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Quantidade de refrigerantes</td>
+                        <td class="right">6 Litros</td>
+                        <td class="right">R$30,00</td>
+                    </tr>
+                    <tr>
+                        <td>Quantidade de Cerveja</td>
+                        <td class="right">16 Latas (355ml)</td>
+                        <td class="right">R$81.89</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td colspan="2" class="right">R$210,89</td>
+                    </tr>
+                </tbody>
+            </table> -->
         </section>
     </main>
     <footer>

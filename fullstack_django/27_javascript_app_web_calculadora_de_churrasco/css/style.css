@@ -10,6 +10,7 @@
     --footer-text-color: #fff; /* Branco */
     --bottom-background-color: #3a3892;
     --bottom-text-color: #fff;
+    --table-background-row-color: #fff;
   }
   /* grid-template-rows: 3.125rem 1fr 3.125rem; */
 
@@ -71,10 +72,18 @@ main section.amount input {
     border: 1px solid var(--card-text-color);
 }
 
+main div.error {
+    height: 1rem;
+}
+
+main div.error p {
+    color: red;
+}
+
 main section.main {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
@@ -116,6 +125,40 @@ main section.main button {
     color: var(--bottom-text-color); 
     font-weight: 700;
     cursor: pointer;
+}
+
+main section.result {
+    display: grid;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    padding: 1rem;
+    background-color: var(--card-background-color);
+}
+
+main section.result h2 {
+    grid-column: span 2; 
+    justify-self: center;
+    color: var(--text-color-title);
+}
+
+main section.result table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+main section.result table th, td {
+    padding: .5rem;
+}
+
+main section.result th.right, main section.result td.right{
+    text-align: right;
+}
+
+main section.result tr:nth-of-type(even){
+    background-color: var(--table-background-row-color);
 }
 
 footer {
