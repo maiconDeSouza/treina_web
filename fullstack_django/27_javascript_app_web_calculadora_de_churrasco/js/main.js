@@ -1,7 +1,8 @@
 import {
     gerenateListValues,
     setMessageError,
-    calcule
+    calcule,
+    writeResults
 } from './utils.js'
 
 import {
@@ -24,8 +25,8 @@ buttonCalc.addEventListener('click', e => {
         return
     }
     
-    const result = calcule(values)
-    console.log(result)
+    const resultCalcule = calcule(values)
+    writeResults(resultCalcule)
 })
 
 input.forEach(input => {

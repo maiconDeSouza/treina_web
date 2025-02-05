@@ -144,6 +144,10 @@ main section.result h2 {
     color: var(--text-color-title);
 }
 
+main section.result table.hidden {
+    display: none;
+}
+
 main section.result table {
     border-collapse: collapse;
     width: 100%
@@ -164,3 +168,4 @@ main section.result tr:nth-of-type(even){
 footer {
     background-color: var(--footer-background-color);
 }
+
