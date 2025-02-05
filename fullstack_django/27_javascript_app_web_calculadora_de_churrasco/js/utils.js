@@ -101,14 +101,30 @@ export function calcule(arrayValues){
 
 }
 
+function floatingPoint3Places(value){
+    return value.toFixed(3)
+}
+
+function floatingPoint2Places(value){
+    return value.toFixed(2)
+}
+
 export function writeResults(resultCalcule){
     const tdWeightMeats = document.querySelector('.meats tbody tr:nth-of-type(1) td:nth-of-type(2)')
     const tdSumMeats = document.querySelector('.meats tbody tr:nth-of-type(1) td:nth-of-type(3)')
-    const textWeighMeats = document.createTextNode(`${resultCalcule['meats']['amount'].toFixed(3)}g`)
-    const textSumMeats = document.createTextNode(`R$${resultCalcule['meats']['sum'].toFixed(2)}`)
+    const textWeighMeats = document.createTextNode(`${floatingPoint3Places(resultCalcule['meats']['amount'])}g`)
+    const textSumMeats = document.createTextNode(`R$${floatingPoint2Places(resultCalcule['meats']['sum'])}`)
     tdWeightMeats.textContent = ''
     tdWeightMeats.appendChild(textWeighMeats)
     tdSumMeats.textContent = ''
     tdSumMeats.appendChild(textSumMeats)
 
+    const tdWeightChicken = document.querySelector('.meats tbody tr:nth-of-type(2) td:nth-of-type(2)')
+    const tdSumChicken = document.querySelector('.meats tbody tr:nth-of-type(2) td:nth-of-type(3)')
+    const textWeighChicken = document.createTextNode(`${floatingPoint3Places(resultCalcule['chicken']['amount'])}g`)
+    const textSumChicken = document.createTextNode(`R$${floatingPoint2Places(resultCalcule['chicken']['sum'])}`)
+    tdWeightChicken.textContent = ''
+    tdWeightChicken.appendChild(textWeighChicken)
+    tdSumChicken.textContent = ''
+    tdSumChicken.appendChild(textSumChicken)
 }
