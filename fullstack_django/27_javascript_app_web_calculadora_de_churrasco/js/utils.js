@@ -64,6 +64,7 @@ export function calcule(arrayValues){
     const totalWeightPork = arrayValues[0].value * weightPerPersonPork
     const totalLitersSoftDrinks = arrayValues[0].value * litersPerPersonSoftDrinks
     const totalCansBeer = arrayValues[6].value * cansPerPersonBeer
+    console.log(totalCansBeer)
   
     const sumMeats = arrayValues[1].value * totalWeightMeats
     const sumChicken = arrayValues[2].value * totalWeightChicken
@@ -162,4 +163,19 @@ export function writeResults(resultCalcule){
     tdTotalLitersSoftDrinks.appendChild(textTotalLitersSoftDrinks)
     tdSumLitersSoftDrinks.textContent = ''
     tdSumLitersSoftDrinks.appendChild(textSumLitersSoftDrinks)
+
+    const tdTotalCansBeer = document.querySelector('.drinks tbody tr:nth-of-type(2) td:nth-of-type(2)')
+    const tdSumCansBeer = document.querySelector('.drinks tbody tr:nth-of-type(2) td:nth-of-type(3)')
+    const textTotalCansBeer = document.createTextNode(`${resultCalcule['beer']['amount']} latas (355ml)`)
+    const textSumCansBeer = document.createTextNode(`R$${floatingPoint2Places(resultCalcule['beer']['sum'])}`)
+    tdTotalCansBeer.textContent = ''
+    tdTotalCansBeer.appendChild(textTotalCansBeer)
+    tdSumCansBeer.textContent = ''
+    tdSumCansBeer.appendChild(textSumCansBeer)
+
+
+    const tdSumTotal = document.querySelector('.drinks tbody tr:nth-of-type(3) td:nth-of-type(2)')
+    const textSumTotal = document.createTextNode(`R$${floatingPoint2Places(resultCalcule['sumTotal']['sum'])}`)
+    tdSumTotal.textContent = ''
+    tdSumTotal.appendChild(textSumTotal)
 }
